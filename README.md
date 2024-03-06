@@ -35,8 +35,6 @@ The models were evaluated using Root Mean Squared Error (RMSE) and Mean Absolute
 
 ### Ridge Regression with GD and ELS
 - *Gradient Descent's performance depends on the learning rate and number of iterations*
-  
-- The use of exact line search in gradient descent potentially improved the convergence speed.
 ![Gradient Descent Ridge Regression](Images/Gradient_Descent_Ridge_Regression.png)
 
 - *This plot shows the cost reducing over time as Gradient Descent iteratively updates the weights.*
