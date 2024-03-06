@@ -18,11 +18,11 @@ The images below visualize the performance and efficiency of each regression tec
 *Closed Form Ridge Regression shows a stable solution since it directly calculates the optimal weights.*
 
 ### Gradient Descent Ridge Regression
-![Gradient Descent Ridge Regression](Images/Gradient_Descent_Ridge_Regression).png)
+![Gradient Descent Ridge Regression](Images/Gradient_Descent_Ridge_Regression.png)
 *Gradient Descent's performance depends on the learning rate and number of iterations.*
 
 ### Cost Vs Epochs for Gradient Descent
-![Cost Vs Epochs for Gradient Descent](Images/Gradient_Descent_Ridge_Regression_cost).png)
+![Cost Vs Epochs for Gradient Descent](Images/Gradient_Descent_Ridge_Regression_cost.png)
 *This plot shows the cost reducing over time as Gradient Descent iteratively updates the weights.*
 
 ### Exact Line Search Ridge Regression
