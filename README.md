@@ -1,31 +1,54 @@
 # Machine learning: Ridge regression
 
-This repository contains the implementation of various Ridge Regression techniques including Closed Form, Polynomial Regression, Gradient Descent, and Exact Line Search. The goal is to compare the effectiveness and performance of these techniques on different datasets.
+## Overview
+This project focuses on implementing and comparing different approaches to Ridge Regression, a type of regularized linear regression that includes a regularization parameter to prevent overfitting. The examined methods include the analytical Closed Form solution, the non-linear fitting of Polynomial Regression, and iterative optimization with Gradient Descent (GD) and Exact Line Search (ELS).
 
-## Regression Techniques Overview
+## Datasets
+The project utilizes two sets of data:
 
-- **Closed Form**: Closed Form solution involves an analytical approach to solve regression weights. It computes the weights using a direct formula, which is computationally intensive. However, provides exact solutions without the need for iterative optimization.
-- **Polynomial Regression**: Polynomial Ridge Regression is a form of regression that models the relationship as a polynomial function of the input features. It's useful for capturing the non-linear relationship between the dependent and independent variables.
-- **Gradient Descent**: Gradient Descent is an optimization algorithm that iteratively adjusts the parameters to find the minimum cost. It uses a fixed learning rate to update the weights in the opposite direction of the gradient of the cost function.
-- **Exact Line Search**: Exact Line Search optimizes the learning rate at each iteration of the Gradient Descent. Unlike the constant step size in traditional GD, Exact Line Search seeks to find the optimal step size that minimizes the cost function most efficiently at each step.
+Linear data with a single feature for Ridge Regression.
+Non-linear data that is transformed into polynomial features for Polynomial Ridge Regression.
 
-## Visual Analysis
+The datasets were split into training and testing sets to evaluate the performance of the models.
 
-The images below visualize the performance and efficiency of each regression technique:
+## Methodology
+Four distinct regression models were implemented:
+
+- **Ridge Regression Closed Form:** A traditional approach using a closed-form solution to find the weights that minimize the regularized loss function.
+
+- **Polynomial Ridge Regression Closed Form:** An extension of the Ridge Regression that includes polynomial features, allowing the model to fit non-linear patterns in the data.
+
+- **Ridge Regression with Gradient Descent (GD):** An iterative optimization algorithm used to minimize the cost function by updating the weights gradually based on the gradient.
+
+- **Ridge Regression with Exact Line Search (ELS):** A modification of the GD approach that includes a line search to find the optimal step size for each iteration.
+
+## Result Analysis
+The models were evaluated using Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE). The performance metrics along with visualization plots for each model provided insights into their effectiveness.
 
 ### Closed Form Ridge Regression
+- *Closed Form Ridge Regression shows a stable solution since it directly calculates the optimal weights.*
 ![Closed Form Ridge Regression](Images/Ridge_Regression_Closed_Form.png)
-*Closed Form Ridge Regression shows a stable solution since it directly calculates the optimal weights.*
 
-### Gradient Descent Ridge Regression
+### Polynomial Ridge Regression
+- *A non-linear fit was visualized, demonstrating the model's capacity to capture more complex patterns.*
+![Closed Form Ridge Regression](Images/Polynomial_Ridge_Regression_Degree_5.png)
+
+### Ridge Regression with GD and ELS
+- *Gradient Descent's performance depends on the learning rate and number of iterations*
+  
+- The use of exact line search in gradient descent potentially improved the convergence speed.
 ![Gradient Descent Ridge Regression](Images/Gradient_Descent_Ridge_Regression.png)
-*Gradient Descent's performance depends on the learning rate and number of iterations.*
 
-### Cost Vs Epochs for Gradient Descent
+- *This plot shows the cost reducing over time as Gradient Descent iteratively updates the weights.*
 ![Cost Vs Epochs for Gradient Descent](Images/Gradient_Descent_Ridge_Regression_cost.png)
-*This plot shows the cost reducing over time as Gradient Descent iteratively updates the weights.*
 
-### Exact Line Search Ridge Regression
+- *Exact Line Search potentially finds the optimal learning rate dynamically, which can lead to quicker and more stable convergence compared to standard Gradient Descent.*
 ![Exact Line Search Ridge Regression](Images/exact_line_search.png)
-*Exact Line Search potentially finds the optimal learning rate dynamically, which can lead to quicker and more stable convergence compared to standard Gradient Descent.*
 
+## Conclusion
+The project successfully demonstrates the application of Ridge Regression in different scenarios. The closed-form solution provides a straightforward method for linear data, while polynomial transformation allows for handling non-linear datasets. Gradient Descent and Exact Line Search offer iterative approaches that converge to the solution, with ELS potentially being more efficient.
+
+## Future Work
+- Testing on datasets with higher dimensionality.
+- Implementing cross-validation for hyperparameter tuning.
+- Comparing Ridge Regression with other regularized regression models like Lasso and Elastic Net.
