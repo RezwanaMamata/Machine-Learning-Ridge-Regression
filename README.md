@@ -14,7 +14,7 @@ This repository contains the implementation of various Ridge Regression techniqu
 The images below visualize the performance and efficiency of each regression technique:
 
 ### Closed Form Ridge Regression
-![Closed Form Ridge Regression](/path/to/closed_form.png)
+![Closed Form Ridge Regression](/Images/closed_form.png)
 *Closed Form Ridge Regression shows a stable solution since it directly calculates the optimal weights.*
 
 
